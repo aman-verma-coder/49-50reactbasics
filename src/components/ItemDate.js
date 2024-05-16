@@ -1,12 +1,13 @@
 import './ItemDate.css';
 
-function ItemDate() {
+function ItemDate(props) {
+    const date = props.date;
+    const time = props.time;;
     return (
         <div className='itemDate' >
-            <p><b>Item Date:</b> 16 May, 2024</p>
-            <p><b>Item Time:</b> 13:18</p>
+            <p><b>Item Date:</b> {date}</p>
+            <p><b>Item Time:</b> {time}</p>
         </div>
     )
 }
-
 export default ItemDate;
