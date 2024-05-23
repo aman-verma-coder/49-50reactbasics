@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './ProductForm.css';
-function ProductForm() {
+function ProductForm(props) {
     const [newtitle, setTitle] = useState('');
     const [newdate, setDate] = useState('');
     // const [fullProductInput, setProductInput] = useState({
@@ -24,10 +24,12 @@ function ProductForm() {
             title: newtitle,
             date: newdate
         }
-        console.log(productData);
+        // console.log(productData);
+        props.onSaveProduct(productData);
         setTitle('');
         setDate('');
     }
+
     return (
         <div className='newProduct'>
             <form onSubmit={onSubmitHandler}>

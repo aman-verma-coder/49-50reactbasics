@@ -3,7 +3,8 @@
 // import ItemDate from "./components/ItemDate.js";
 // import Card from "./components/Card.js";
 import Product from "./components/Product.js";
-import ProductForm from "./components/ProductForm.js";
+// import ProductForm from "./components/ProductForm.js";
+import NewProduct from "./components/NewProduct.js";
 import './App.css';
 
 function App() {
@@ -29,9 +30,13 @@ function App() {
       date: '25 Jan 2000'
     }
   ]
+  function printProductData(data) {
+    console.log(data);
+    console.log('I am inside App.js');
+  }
   return (
     <div>
-      <ProductForm></ProductForm>
+      <NewProduct aman={printProductData} />
       <Product items={response}></Product>
       {/* <div className="App">
         Hello Ji
