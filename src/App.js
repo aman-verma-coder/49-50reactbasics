@@ -3,6 +3,7 @@
 // import ItemDate from "./components/ItemDate.js";
 // import Card from "./components/Card.js";
 import Product from "./components/Product.js";
+import ProductForm from "./components/ProductForm.js";
 import './App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
   ]
   return (
     <div>
+      <ProductForm></ProductForm>
       <Product items={response}></Product>
       {/* <div className="App">
         Hello Ji
