@@ -25,17 +25,19 @@ function ProductForm() {
             date: newdate
         }
         console.log(productData);
+        setTitle('');
+        setDate('');
     }
     return (
         <div className='newProduct'>
             <form onSubmit={onSubmitHandler}>
                 <div>
                     <label>Title:</label>
-                    <input type='text' onChange={titleChangeHandler}></input>
+                    <input type='text' value={newtitle} onChange={titleChangeHandler}></input>
                 </div>
                 <div>
                     <label>Date:</label>
-                    <input type='date' min='01-01-2024' max='18-05-2024' onChange={dateChangeHandler}></input>
+                    <input type='date' value={newdate} min='01-01-2024' max='18-05-2024' onChange={dateChangeHandler}></input>
                 </div>
                 <div>
                     <button type='submit'>Add New Product</button>
